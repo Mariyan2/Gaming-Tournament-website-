@@ -23,7 +23,7 @@ function TournamentsList() {
       {tournamentListData.map(t => (
         
         <div key={t.id}>
-          <strong>{t.title}</strong> - {t.location}<br />
+          <p>{t.title}</p> - {t.location}<br />
 
           Date {t.date?.toDate().toLocaleString()}<br />
           Available Spots {t.avalableSpots}/{t.maximumSpots} <hr />
