@@ -8,16 +8,11 @@ const TournamentRegister = () =>{
 const[tournamentID,setTournamentID] = useState();
 
 
-
-
-
 const registerHandle = async () => { 
     const user = auth.currentUser;
 if(!user){alert("user is not logged in");
      return;
 }
-
-
 
 try{
 await addDoc(collection(db,"registrations"),{
@@ -31,10 +26,7 @@ catch(error){ alert("registration now sucesful! ");
     console.log(error.message);
 }
 
-
 }
-
-
     return(<div>
         <h2>Register for torunament: </h2>
         <input 

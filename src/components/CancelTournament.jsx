@@ -8,7 +8,7 @@ const [tournamentID,setTournamentID] = useState("");
 const tournamentHandle = async() =>{
     if(!tournamentID){ alert("Enter a tournament ID.")
         return;
-    }
+    } T
 
 try{
     await deleteDoc(doc(db,"tournaments",tournamentID));

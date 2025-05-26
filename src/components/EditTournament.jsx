@@ -19,7 +19,6 @@ return;
 }
 const docRef = doc(db, "tournaments", selectedTournamentID);
 
-//ASK LECTURER ABOUT NUMBER() NEW DATE()
 try { await updateDoc(docRef,{
     adminID:tournamentAdmin,
     avalableSpots:Number(tournamentAvalableSpots),
@@ -33,10 +32,6 @@ catch (error){ console.log("error message: ",error);
     alert("Update has not been sucesful");
 }
 };
-
-
-
-
 
 
     return(<div>

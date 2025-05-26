@@ -8,6 +8,8 @@ const [tournamentName,setTournamentName] = useState("")
 const [tournamentDate,setTournamentDate] = useState("")
 const [tournamentLocation,setTournamentLocation] = useState("")
 const [tournamentAvailableSpots ,setTournamentAvalableSpots] = useState("")
+const [latitude, setLatitude] = useState("") 
+const [longitude, setLongitude] = useState("")
 
 const handleSubmit = async (e) =>{
     e.preventDefault();
@@ -18,7 +20,9 @@ const createdTournament = {
     location : tournamentLocation,
     maximumSpots:Number(tournamentAvailableSpots),
     avalableSpots: Number(tournamentAvailableSpots),
-    adminID:"TESTADMINID"
+    adminID:"TESTADMINID",
+    lat: Number(latitude),
+    lng: Number(longitude) 
 };
 
 try{ await addDoc(collection(db,"tournaments"),createdTournament)
@@ -67,7 +71,25 @@ type="number"
 value={tournamentAvailableSpots}
 onChange={(e) => setTournamentAvalableSpots(e.target.value)}
 />
+<br />
+<label>latitude: </label>
 
+<input
+  type="number"
+  step="any"
+  value={latitude}
+  onChange={(e) => setLatitude(e.target.value)}
+/>
+<br />
+
+<label>longitude: </label>
+
+<input
+  type="number"
+  step="any"
+  value={longitude}
+  onChange={(e) => setLongitude(e.target.value)}
+/>
 <br />
 
 

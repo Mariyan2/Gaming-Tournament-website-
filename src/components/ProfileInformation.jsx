@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { auth } from "../firebase";
 
 
-function ProfilePage(){
+function ProfileInfo(){
 const [user,setUser] = useState(null)
 
   useEffect(() => {
@@ -23,4 +23,4 @@ const [user,setUser] = useState(null)
         <p>UserID: {user.uid}</p>
     </div>);}
 
-    export default ProfilePage;
+    export default ProfileInfo;
